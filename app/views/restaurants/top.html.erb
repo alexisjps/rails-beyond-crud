@@ -1,0 +1,8 @@
+<h1>Les meilleurs restaurants</h1>
+
+<% @best_restaurants.each do |restaurant|  %>
+  <p><%= restaurant.name %></p>
+  <p><%= restaurant.address %></p>
+  <p><%= restaurant.rating %>/5</p>
+  <%= link_to "Voir le restaurant #{restaurant.name}", restaurant_path(restaurant) %>
+<% end %>
